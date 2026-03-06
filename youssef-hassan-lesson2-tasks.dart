@@ -1,10 +1,18 @@
 import 'dart:io';
 
 void main() {
+
+
+
+    //====== Task 1 =================================================================================================================================
+
   print("====== Task 1 ======");
   String name = "Youssef Hassan";
   int age = 20;
-  print("Hello, my name is $name, and I am $age years old.");
+  int tall = 180;
+  print("Hello, my name is $name, and I am $age years old my tall is $tall cm");
+// --------------------------------------------------------------
+//====== Task 2 =================================================================================================================================
 
   print("\n====== Task 2 ======");
   int num1 = 15;
@@ -12,6 +20,12 @@ void main() {
   int sum = num1 + num2;
   print("The sum of $num1 and $num2 is $sum.");
 
+
+
+
+
+
+//====== Task 3 =================================================================================================================================
   print("\n====== Task 3 ======");
   int numberToCheck = 150;
   if (numberToCheck > 100) {
@@ -20,12 +34,23 @@ void main() {
     print("Small");
   }
 
+
+
+
+
+
+
+//====== Task 4 =================================================================================================================================
   print("\n====== Task 4 ======");
   String? nullableString;
-  print(
-    nullableString ?? "This is a default message because the string is null.",
-  );
+  print(nullableString ?? "This is a default message because the string is null.");
 
+
+
+
+
+
+//====== Task 5 =================================================================================================================================
   print("\n====== Task 5 ======");
   List<int> numbersList = [10, 20, 30, 40, 50];
   int totalSum = 0;
@@ -34,11 +59,23 @@ void main() {
   }
   print("The total sum is $totalSum.");
 
+
+
+
+
+//====== Task 6 =================================================================================================================================
   print("\n====== Task 6 ======");
-  // Using a variable for Celsius as requested in the task description
   double celsius = 30.0;
   double fahrenheit = (celsius * 9 / 5) + 32;
   print("$celsius°C is equal to ${fahrenheit.toStringAsFixed(2)}°F.");
+
+
+
+
+
+
+
+//====== Task 7 =================================================================================================================================
 
   print("\n====== Task 7 ======");
   int divNumber = 15;
@@ -52,20 +89,29 @@ void main() {
     print("$divNumber is not divisible by 3 or 5.");
   }
 
+
+
+
+
+
+
+
+//====== Task 8 =================================================================================================================================
+
   print("\n====== Task 8 ======");
-  List<String> namesList = [
-    "Ali",
-    "Ahmed",
-    "Sara",
-    "Youssef",
-    "Maha",
-    "Mahmoud",
-  ];
+  List<String> namesList = ["Ali", "Ahmed", "Sara", "Youssef", "Maha", "Mahmoud"];
   for (String n in namesList) {
     if (n.length > 4) {
       print(n);
     }
   }
+
+
+
+
+
+    
+//====== Task 9 =================================================================================================================================
 
   print("\n====== Task 9 ======");
   Map<String, int> items = {
@@ -73,13 +119,22 @@ void main() {
     "Pen": 10,
     "Bag": 150,
     "Shoes": 200,
-    "Notebook": 30,
+    "Notebook": 30
   };
   items.forEach((itemName, itemPrice) {
     if (itemPrice > 50) {
       print("Item: $itemName, Price: $itemPrice");
     }
   });
+
+
+
+
+
+
+
+  
+//====== Task 10 =================================================================================================================================
 
   print("\n====== Task 10 ======");
   stdout.write("Enter a number to check even/odd: ");
@@ -92,14 +147,21 @@ void main() {
     } else {
       result = "Odd";
     }
-
-    // Print the result only if it's not null
+    
     if (result != null) {
       print("The number is $result");
     }
   } else {
     print("Invalid input.");
   }
+
+
+
+
+
+
+  
+//====== Task 11 =================================================================================================================================
 
   print("\n====== Task 11 ======");
   List<int> task11Numbers = [12, 45, 2, 78, 34, 90, 5];
@@ -114,13 +176,21 @@ void main() {
     print("Lowest value: $lowest");
   }
 
+
+
+
+
+
+
+//====== Task 12 =================================================================================================================================
+
   print("\n====== Task 12 ======");
   stdout.write("Enter a number to check if it's prime: ");
   String? primeInput = stdin.readLineSync();
   if (primeInput != null && int.tryParse(primeInput) != null) {
     int primeCheckedNum = int.parse(primeInput);
     bool isPrime = true;
-
+    
     if (primeCheckedNum <= 1) {
       isPrime = false;
     } else {
@@ -131,7 +201,7 @@ void main() {
         }
       }
     }
-
+    
     if (isPrime) {
       print("$primeCheckedNum is a prime number.");
     } else {
@@ -140,6 +210,13 @@ void main() {
   } else {
     print("Invalid input.");
   }
+
+
+
+
+
+
+//====== Task 13 =================================================================================================================================
 
   print("\n====== Task 13 ======");
   List<num> mixedNumbers = [10, -5, 20.5, -10.2, 5, -2];
@@ -156,6 +233,15 @@ void main() {
   } else {
     print("No positive numbers found.");
   }
+
+
+
+
+
+
+
+  
+//====== Task 14 =================================================================================================================================
 
   print("\n====== Task 14 ======");
   stdout.write("Enter first number for calculator: ");
@@ -183,23 +269,25 @@ void main() {
     print("Invalid numbers entered.");
   }
 
+
+
+
+
+
+//====== Task 15 =================================================================================================================================
   print("\n====== Task 15 ======");
   Map<String, String> users = {
     "admin": "12345",
     "user": "password",
-    "youssef": "123",
+    "youssef": "123"
   };
-
+  
   stdout.write("Enter username: ");
   String? enteredUser = stdin.readLineSync();
   stdout.write("Enter password: ");
   String? enteredPass = stdin.readLineSync();
 
-  // Handle the case if the entered values are null
-  if (enteredUser == null ||
-      enteredPass == null ||
-      enteredUser.trim().isEmpty ||
-      enteredPass.trim().isEmpty) {
+  if (enteredUser == null || enteredPass == null || enteredUser.trim().isEmpty || enteredPass.trim().isEmpty) {
     print("Error: Username or password cannot be empty.");
   } else {
     if (users.containsKey(enteredUser) && users[enteredUser] == enteredPass) {
