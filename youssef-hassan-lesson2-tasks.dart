@@ -10,7 +10,8 @@ void main() {
   String name = "Youssef Hassan";
   int age = 20;
   int tall = 180;
-  print("Hello, my name is $name, and I am $age years old my tall is $tall cm");
+  String country = "Egypt";
+  print("Hello, my name is $name, and I am $age years old my tall is $tall cm from $country");
 // --------------------------------------------------------------
 //====== Task 2 =================================================================================================================================
 
